@@ -1,29 +1,2977 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>PAYTM VYAPARMITRA AI — Merchant Growth Copilot</title>
+
 <style>
-:root{--navy:#071b3a;--ink:#12213a;--muted:#64748b;--line:#e7edf5;--canvas:#f5f8fc;--white:#fff;--blue:#1677df;--pale:#eaf4ff;--purple:#7656e8;--lav:#f1eeff;--green:#15835d;--mint:#e9f8f1;--amber:#b86400;--sand:#fff7e7;--red:#c74343;--rose:#fff0f0;--r:16px;--shadow:0 12px 30px rgba(15,33,64,.07)}
-*{box-sizing:border-box} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--canvas);font-size:14px;line-height:1.45}.shell{min-height:100vh;display:grid;grid-template-columns:252px minmax(0,1fr)}
-.sidebar{background:var(--navy);color:#dce9ff;padding:26px 16px;display:flex;flex-direction:column;gap:28px;position:sticky;top:0;height:100vh}.brand{display:flex;gap:10px;align-items:center;padding:0 8px}.brandmark{width:34px;height:34px;border-radius:10px;background:#1f8cff;display:grid;place-items:center;color:white;font-weight:900;font-size:19px}.brand strong{color:#fff;letter-spacing:-.5px;font-size:15px}.brand small{display:block;font-size:10px;color:#94b6e8;letter-spacing:.06em;margin-top:2px}.nav{display:grid;gap:5px}.nav button{width:100%;border:0;background:transparent;color:#a7c0e8;border-radius:10px;padding:11px 12px;text-align:left;display:flex;align-items:center;gap:11px;font:inherit;cursor:pointer}.nav button:hover,.nav button.active{background:rgba(111,166,244,.17);color:#fff}.icon{width:18px;height:18px;flex:0 0 auto}.agent-card{margin-top:auto;border:1px solid rgba(130,176,245,.22);background:rgba(255,255,255,.06);border-radius:14px;padding:14px}.agent-card b{color:white;display:block;margin:5px 0}.agent-card p{font-size:12px;color:#b8cdeb;margin:0}.agent-dot{color:#78e0ae;font-size:11px;font-weight:700}.content{min-width:0}.topbar{height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 34px;background:#fff;border-bottom:1px solid var(--line)}.crumb{font-size:12px;color:var(--muted);font-weight:700;letter-spacing:.06em;text-transform:uppercase}.merchant{display:flex;align-items:center;gap:11px}.avatar{width:35px;height:35px;border-radius:50%;display:grid;place-items:center;background:var(--lav);color:var(--purple);font-weight:800}.mname{font-weight:750;font-size:13px}.location{font-size:11px;color:var(--muted)}.bell{border:1px solid var(--line);background:#fff;width:37px;height:37px;border-radius:10px;display:grid;place-items:center;color:var(--ink)}main{padding:32px 34px 48px;max-width:1500px;margin:auto}.page-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:26px}.eyebrow{font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:800;color:var(--blue);margin-bottom:6px}.page-head h1{font-size:28px;letter-spacing:-.85px;margin:0;line-height:1.12}.page-head p{color:var(--muted);font-size:14px;margin:8px 0 0}.sample{font-size:11px;color:#7b879b;background:white;border:1px solid var(--line);border-radius:99px;padding:7px 10px;white-space:nowrap}.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.card{background:var(--white);border:1px solid var(--line);border-radius:var(--r);box-shadow:0 3px 10px rgba(22,40,75,.025)}.metric{padding:18px}.metric .label{font-size:12px;color:var(--muted);font-weight:600}.metric .value{font-size:24px;font-weight:800;letter-spacing:-.7px;margin-top:10px}.metric .delta{font-size:11px;font-weight:750;margin-top:6px}.positive{color:var(--green)}.negative{color:var(--red)}.grid2{display:grid;grid-template-columns:1.55fr 1fr;gap:17px;margin-top:17px}.section-card{padding:21px}.section-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:15px}.section-title h2{font-size:15px;margin:0;letter-spacing:-.25px}.section-title span{font-size:11px;color:var(--muted)}.chart{width:100%;height:220px;display:block}.legend{display:flex;gap:15px;align-items:center;color:var(--muted);font-size:11px}.legend i{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:5px}.ai-alert{margin-top:17px;border:1px solid #f3d4d4;background:linear-gradient(90deg,#fff 0%,#fff8f8 100%);padding:21px;position:relative;overflow:hidden}.ai-alert:before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--red)}.alert-grid{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center}.ai-label,.tag{display:inline-flex;align-items:center;gap:5px;font-size:10px;text-transform:uppercase;letter-spacing:.07em;font-weight:800}.ai-label{color:var(--red)}.ai-alert h2{font-size:18px;margin:7px 0 4px}.ai-alert p{color:var(--muted);margin:0}.risk{font-size:13px;margin-top:10px;color:var(--red);font-weight:750}.btn{border:0;border-radius:10px;background:var(--blue);color:#fff;padding:11px 15px;font:inherit;font-weight:750;cursor:pointer;box-shadow:0 5px 13px rgba(22,119,223,.2);white-space:nowrap}.btn:hover{background:#0c66c5}.btn.secondary{background:#fff;color:var(--blue);border:1px solid #b9d8fa;box-shadow:none}.recommend{padding:18px;margin-top:17px;display:flex;gap:13px;align-items:flex-start}.recommend .spark{background:var(--lav);color:var(--purple);width:34px;height:34px;border-radius:10px;display:grid;place-items:center;flex:0 0 auto}.recommend b{display:block;font-size:13px}.recommend p{margin:4px 0 0;color:var(--muted);font-size:12px}.flow{display:flex;align-items:center;justify-content:space-between;gap:6px;padding:20px;margin-bottom:18px}.flow-step{flex:1;text-align:center;position:relative;font-size:11px;font-weight:700;color:var(--muted)}.flow-step:not(:last-child):after{content:"→";position:absolute;right:-7px;top:8px;color:#a8bbd1;font-size:19px}.flow-ico{margin:auto auto 7px;width:30px;height:30px;border-radius:9px;background:var(--pale);color:var(--blue);display:grid;place-items:center}.insights{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.insight{padding:20px}.tag{color:var(--blue)}.insight h3{font-size:15px;margin:10px 0 4px}.insight .big{font-size:26px;font-weight:800;letter-spacing:-.7px}.insight p{font-size:12px;color:var(--muted);margin:5px 0 0}.analysis{margin-top:17px;padding:22px;border-left:4px solid var(--purple)}.analysis h3{margin:0 0 5px;font-size:14px}.analysis p{margin:0 0 15px;color:var(--muted)}.warning{background:var(--rose);border:1px solid #f7d3d3;color:var(--red);padding:6px 9px;border-radius:99px;font-size:10px;text-transform:uppercase;font-weight:800}.actions{display:flex;justify-content:flex-end;margin-top:17px}.opportunities{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.opp{padding:20px;display:flex;flex-direction:column}.opp.primary{border:2px solid #80bdf4;box-shadow:0 10px 25px rgba(22,119,223,.09)}.opp h2{font-size:18px;margin:13px 0 7px;letter-spacing:-.35px}.opp p{color:var(--muted);font-size:12px;margin:0 0 17px;min-height:52px}.opp dl{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0 0 19px}.opp dt{font-size:10px;text-transform:uppercase;color:var(--muted);font-weight:700;letter-spacing:.03em}.opp dd{margin:3px 0 0;font-weight:800;font-size:13px}.opp .btn{margin-top:auto;align-self:flex-start}.prominent-label{background:var(--pale);color:var(--blue);padding:5px 8px;border-radius:99px;font-size:10px;font-weight:800;align-self:flex-start}.sim-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:18px}.form-card,.result-card{padding:23px}.form-card h2,.result-card h2{font-size:17px;margin:0 0 18px}.field{margin-bottom:19px}.field label{display:block;font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-bottom:7px}.input-like{border:1px solid var(--line);border-radius:10px;background:#fbfcfe;padding:11px 12px;font-weight:700;font-size:13px}.range-row{display:flex;justify-content:space-between;color:var(--blue);font-weight:800;margin-bottom:8px}input[type=range]{width:100%;accent-color:var(--blue)}.result-metrics{display:grid;grid-template-columns:repeat(2,1fr);gap:11px}.result-metrics div{background:#f8fafc;border:1px solid #edf1f6;border-radius:11px;padding:12px}.result-metrics small{display:block;color:var(--muted);font-size:10px;font-weight:700;text-transform:uppercase}.result-metrics b{display:block;font-size:17px;margin-top:5px}.explain{margin:17px 0;background:var(--lav);border-radius:12px;padding:14px;color:#4d3ca7;font-size:12px}.compare{margin-top:18px}.bars{display:grid;gap:10px;margin-top:10px}.bar-row{display:grid;grid-template-columns:76px 1fr 68px;align-items:center;gap:8px;font-size:11px;font-weight:700}.bar-bg{height:9px;background:#edf2f8;border-radius:9px;overflow:hidden}.bar{height:100%;background:var(--blue);border-radius:9px}.bar.purple{background:var(--purple)}.table-card{overflow:hidden}.table-card table{width:100%;border-collapse:collapse}.table-card th{text-align:left;color:var(--muted);background:#fbfcfe;font-size:11px;text-transform:uppercase;letter-spacing:.05em;padding:12px 20px}.table-card td{padding:17px 20px;border-top:1px solid var(--line);font-weight:650}.priority{font-size:10px;font-weight:850;text-transform:uppercase;padding:5px 8px;border-radius:99px;letter-spacing:.04em}.high{background:var(--rose);color:var(--red)}.medium{background:var(--sand);color:var(--amber)}.low{background:var(--pale);color:var(--blue)}.next{padding:24px;margin-top:17px;border:1px solid #d9d0ff;background:linear-gradient(105deg,#fff 5%,#f7f5ff)}.next h2{margin:7px 0;font-size:19px}.next p{max-width:680px;color:var(--muted);margin:0 0 16px}.campaign-summary{padding:20px;display:flex;justify-content:space-between;align-items:center;margin-bottom:17px}.campaign-summary h2{margin:5px 0 0;font-size:19px}.success{color:var(--green);background:var(--mint);font-weight:800;font-size:11px;padding:7px 9px;border-radius:99px}.learn{margin-top:17px;padding:18px;background:var(--mint);border:1px solid #cceedd;color:#176345}.learn b{display:block;margin-bottom:4px}.learn p{margin:0;font-size:12px}.mobile-menu{display:none}.page{display:none}.page.active{display:block}@media(max-width:980px){.shell{grid-template-columns:76px minmax(0,1fr)}.sidebar{padding:20px 10px}.brand>div,.nav span,.agent-card{display:none}.brand{justify-content:center;padding:0}.nav button{justify-content:center;padding:12px}.grid2,.sim-grid{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(2,1fr)}.opportunities{grid-template-columns:1fr}.opp p{min-height:0}.topbar{padding:0 24px}main{padding:28px 24px}}@media(max-width:620px){.shell{display:block}.sidebar{position:static;height:auto;padding:11px 14px;display:flex;flex-direction:row;align-items:center;gap:10px}.brand{padding:0}.nav{display:flex;overflow-x:auto;gap:3px;flex:1}.nav button{width:auto;padding:9px 10px;white-space:nowrap}.nav button .icon{display:none}.topbar{height:61px;padding:0 16px}.crumb{display:none}main{padding:22px 16px 35px}.page-head{align-items:flex-start;flex-direction:column;margin-bottom:18px;gap:10px}.page-head h1{font-size:23px}.kpis,.insights{grid-template-columns:1fr 1fr;gap:10px}.metric{padding:14px}.metric .value{font-size:20px}.grid2{gap:10px;margin-top:10px}.section-card{padding:16px}.alert-grid{grid-template-columns:1fr}.ai-alert{padding:17px}.flow{align-items:stretch;gap:10px;overflow-x:auto;justify-content:flex-start}.flow-step{min-width:94px}.flow-step:not(:last-child):after{right:-10px}.campaign-summary{align-items:flex-start;gap:13px;flex-direction:column}.table-card{overflow-x:auto}.table-card table{min-width:520px}.result-metrics{grid-template-columns:1fr 1fr}.sample{font-size:10px}.actions{justify-content:stretch}.actions .btn{width:100%}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+:root{
+  --navy:#071b3a;
+  --ink:#12213a;
+  --muted:#64748b;
+  --line:#e7edf5;
+  --canvas:#f5f8fc;
+  --white:#fff;
+  --blue:#1677df;
+  --pale:#eaf4ff;
+  --purple:#7656e8;
+  --lav:#f1eeff;
+  --green:#15835d;
+  --mint:#e9f8f1;
+  --amber:#b86400;
+  --sand:#fff7e7;
+  --red:#c74343;
+  --rose:#fff0f0;
+  --r:16px;
+  --shadow:0 12px 30px rgba(15,33,64,.07)
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  color:var(--ink);
+  background:var(--canvas);
+  font-size:14px;
+  line-height:1.45
+}
+
+.shell{
+  min-height:100vh;
+  display:grid;
+  grid-template-columns:252px minmax(0,1fr)
+}
+
+.sidebar{
+  background:var(--navy);
+  color:#dce9ff;
+  padding:26px 16px;
+  display:flex;
+  flex-direction:column;
+  gap:28px;
+  position:sticky;
+  top:0;
+  height:100vh
+}
+
+.brand{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  padding:0 8px
+}
+
+.brandmark{
+  width:34px;
+  height:34px;
+  border-radius:10px;
+  background:#1f8cff;
+  display:grid;
+  place-items:center;
+  color:white;
+  font-weight:900;
+  font-size:19px
+}
+
+.brand strong{
+  color:#fff;
+  letter-spacing:-.5px;
+  font-size:15px
+}
+
+.brand small{
+  display:block;
+  font-size:10px;
+  color:#94b6e8;
+  letter-spacing:.06em;
+  margin-top:2px
+}
+
+.nav{
+  display:grid;
+  gap:5px
+}
+
+.nav button{
+  width:100%;
+  border:0;
+  background:transparent;
+  color:#a7c0e8;
+  border-radius:10px;
+  padding:11px 12px;
+  text-align:left;
+  display:flex;
+  align-items:center;
+  gap:11px;
+  font:inherit;
+  cursor:pointer
+}
+
+.nav button:hover,
+.nav button.active{
+  background:rgba(111,166,244,.17);
+  color:#fff
+}
+
+.icon{
+  width:18px;
+  height:18px;
+  flex:0 0 auto
+}
+
+.agent-card{
+  margin-top:auto;
+  border:1px solid rgba(130,176,245,.22);
+  background:rgba(255,255,255,.06);
+  border-radius:14px;
+  padding:14px
+}
+
+.agent-card b{
+  color:white;
+  display:block;
+  margin:5px 0
+}
+
+.agent-card p{
+  font-size:12px;
+  color:#b8cdeb;
+  margin:0
+}
+
+.agent-dot{
+  color:#78e0ae;
+  font-size:11px;
+  font-weight:700
+}
+
+.content{
+  min-width:0
+}
+
+.topbar{
+  height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 34px;
+  background:#fff;
+  border-bottom:1px solid var(--line)
+}
+
+.crumb{
+  font-size:12px;
+  color:var(--muted);
+  font-weight:700;
+  letter-spacing:.06em;
+  text-transform:uppercase
+}
+
+.merchant{
+  display:flex;
+  align-items:center;
+  gap:11px
+}
+
+.avatar{
+  width:35px;
+  height:35px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:var(--lav);
+  color:var(--purple);
+  font-weight:800
+}
+
+.mname{
+  font-weight:750;
+  font-size:13px
+}
+
+.location{
+  font-size:11px;
+  color:var(--muted)
+}
+
+.bell{
+  border:1px solid var(--line);
+  background:#fff;
+  width:37px;
+  height:37px;
+  border-radius:10px;
+  display:grid;
+  place-items:center;
+  color:var(--ink)
+}
+
+main{
+  padding:32px 34px 48px;
+  max-width:1500px;
+  margin:auto
+}
+
+.page-head{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  align-items:end;
+  margin-bottom:26px
+}
+
+.eyebrow{
+  font-size:11px;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  font-weight:800;
+  color:var(--blue);
+  margin-bottom:6px
+}
+
+.page-head h1{
+  font-size:28px;
+  letter-spacing:-.85px;
+  margin:0;
+  line-height:1.12
+}
+
+.page-head p{
+  color:var(--muted);
+  font-size:14px;
+  margin:8px 0 0
+}
+
+.sample{
+  font-size:11px;
+  color:#7b879b;
+  background:white;
+  border:1px solid var(--line);
+  border-radius:99px;
+  padding:7px 10px;
+  white-space:nowrap
+}
+
+.kpis{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px
+}
+
+.card{
+  background:var(--white);
+  border:1px solid var(--line);
+  border-radius:var(--r);
+  box-shadow:0 3px 10px rgba(22,40,75,.025)
+}
+
+.metric{
+  padding:18px
+}
+
+.metric .label{
+  font-size:12px;
+  color:var(--muted);
+  font-weight:600
+}
+
+.metric .value{
+  font-size:24px;
+  font-weight:800;
+  letter-spacing:-.7px;
+  margin-top:10px
+}
+
+.metric .delta{
+  font-size:11px;
+  font-weight:750;
+  margin-top:6px
+}
+
+.positive{
+  color:var(--green)
+}
+
+.negative{
+  color:var(--red)
+}
+
+.grid2{
+  display:grid;
+  grid-template-columns:1.55fr 1fr;
+  gap:17px;
+  margin-top:17px
+}
+
+.section-card{
+  padding:21px
+}
+
+.section-title{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:15px
+}
+
+.section-title h2{
+  font-size:15px;
+  margin:0;
+  letter-spacing:-.25px
+}
+
+.section-title span{
+  font-size:11px;
+  color:var(--muted)
+}
+
+.chart{
+  width:100%;
+  height:220px;
+  display:block
+}
+
+.legend{
+  display:flex;
+  gap:15px;
+  align-items:center;
+  color:var(--muted);
+  font-size:11px
+}
+
+.legend i{
+  display:inline-block;
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  margin-right:5px
+}
+
+.ai-alert{
+  margin-top:17px;
+  border:1px solid #f3d4d4;
+  background:linear-gradient(90deg,#fff 0%,#fff8f8 100%);
+  padding:21px;
+  position:relative;
+  overflow:hidden
+}
+
+.ai-alert:before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  bottom:0;
+  width:4px;
+  background:var(--red)
+}
+
+.alert-grid{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:20px;
+  align-items:center
+}
+
+.ai-label,
+.tag{
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:.07em;
+  font-weight:800
+}
+
+.ai-label{
+  color:var(--red)
+}
+
+.ai-alert h2{
+  font-size:18px;
+  margin:7px 0 4px
+}
+
+.ai-alert p{
+  color:var(--muted);
+  margin:0
+}
+
+.risk{
+  font-size:13px;
+  margin-top:10px;
+  color:var(--red);
+  font-weight:750
+}
+
+.btn{
+  border:0;
+  border-radius:10px;
+  background:var(--blue);
+  color:#fff;
+  padding:11px 15px;
+  font:inherit;
+  font-weight:750;
+  cursor:pointer;
+  box-shadow:0 5px 13px rgba(22,119,223,.2);
+  white-space:nowrap
+}
+
+.btn:hover{
+  background:#0c66c5
+}
+
+.btn.secondary{
+  background:#fff;
+  color:var(--blue);
+  border:1px solid #b9d8fa;
+  box-shadow:none
+}
+
+.recommend{
+  padding:18px;
+  margin-top:17px;
+  display:flex;
+  gap:13px;
+  align-items:flex-start
+}
+
+.recommend .spark{
+  background:var(--lav);
+  color:var(--purple);
+  width:34px;
+  height:34px;
+  border-radius:10px;
+  display:grid;
+  place-items:center;
+  flex:0 0 auto
+}
+
+.recommend b{
+  display:block;
+  font-size:13px
+}
+
+.recommend p{
+  margin:4px 0 0;
+  color:var(--muted);
+  font-size:12px
+}
+
+.flow{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:6px;
+  padding:20px;
+  margin-bottom:18px
+}
+
+.flow-step{
+  flex:1;
+  text-align:center;
+  position:relative;
+  font-size:11px;
+  font-weight:700;
+  color:var(--muted)
+}
+
+.flow-step:not(:last-child):after{
+  content:"→";
+  position:absolute;
+  right:-7px;
+  top:8px;
+  color:#a8bbd1;
+  font-size:19px
+}
+
+.flow-ico{
+  margin:auto auto 7px;
+  width:30px;
+  height:30px;
+  border-radius:9px;
+  background:var(--pale);
+  color:var(--blue);
+  display:grid;
+  place-items:center
+}
+
+.insights{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px
+}
+
+.insight{
+  padding:20px
+}
+
+.tag{
+  color:var(--blue)
+}
+
+.insight h3{
+  font-size:15px;
+  margin:10px 0 4px
+}
+
+.insight .big{
+  font-size:26px;
+  font-weight:800;
+  letter-spacing:-.7px
+}
+
+.insight p{
+  font-size:12px;
+  color:var(--muted);
+  margin:5px 0 0
+}
+
+.analysis{
+  margin-top:17px;
+  padding:22px;
+  border-left:4px solid var(--purple)
+}
+
+.analysis h3{
+  margin:0 0 5px;
+  font-size:14px
+}
+
+.analysis p{
+  margin:0 0 15px;
+  color:var(--muted)
+}
+
+.warning{
+  background:var(--rose);
+  border:1px solid #f7d3d3;
+  color:var(--red);
+  padding:6px 9px;
+  border-radius:99px;
+  font-size:10px;
+  text-transform:uppercase;
+  font-weight:800
+}
+
+.actions{
+  display:flex;
+  justify-content:flex-end;
+  margin-top:17px
+}
+
+.opportunities{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px
+}
+
+.opp{
+  padding:20px;
+  display:flex;
+  flex-direction:column
+}
+
+.opp.primary{
+  border:2px solid #80bdf4;
+  box-shadow:0 10px 25px rgba(22,119,223,.09)
+}
+
+.opp h2{
+  font-size:18px;
+  margin:13px 0 7px;
+  letter-spacing:-.35px
+}
+
+.opp p{
+  color:var(--muted);
+  font-size:12px;
+  margin:0 0 17px;
+  min-height:52px
+}
+
+.opp dl{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin:0 0 19px
+}
+
+.opp dt{
+  font-size:10px;
+  text-transform:uppercase;
+  color:var(--muted);
+  font-weight:700;
+  letter-spacing:.03em
+}
+
+.opp dd{
+  margin:3px 0 0;
+  font-weight:800;
+  font-size:13px
+}
+
+.opp .btn{
+  margin-top:auto;
+  align-self:flex-start
+}
+
+.prominent-label{
+  background:var(--pale);
+  color:var(--blue);
+  padding:5px 8px;
+  border-radius:99px;
+  font-size:10px;
+  font-weight:800;
+  align-self:flex-start
+}
+
+.sim-grid{
+  display:grid;
+  grid-template-columns:.85fr 1.15fr;
+  gap:18px
+}
+
+.form-card,
+.result-card{
+  padding:23px
+}
+
+.form-card h2,
+.result-card h2{
+  font-size:17px;
+  margin:0 0 18px
+}
+
+.field{
+  margin-bottom:19px
+}
+
+.field label{
+  display:block;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.05em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:7px
+}
+
+.input-like{
+  border:1px solid var(--line);
+  border-radius:10px;
+  background:#fbfcfe;
+  padding:11px 12px;
+  font-weight:700;
+  font-size:13px
+}
+
+.range-row{
+  display:flex;
+  justify-content:space-between;
+  color:var(--blue);
+  font-weight:800;
+  margin-bottom:8px
+}
+
+input[type=range]{
+  width:100%;
+  accent-color:var(--blue)
+}
+
+.result-metrics{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:11px
+}
+
+.result-metrics div{
+  background:#f8fafc;
+  border:1px solid #edf1f6;
+  border-radius:11px;
+  padding:12px
+}
+
+.result-metrics small{
+  display:block;
+  color:var(--muted);
+  font-size:10px;
+  font-weight:700;
+  text-transform:uppercase
+}
+
+.result-metrics b{
+  display:block;
+  font-size:17px;
+  margin-top:5px
+}
+
+.explain{
+  margin:17px 0;
+  background:var(--lav);
+  border-radius:12px;
+  padding:14px;
+  color:#4d3ca7;
+  font-size:12px
+}
+
+.compare{
+  margin-top:18px
+}
+
+.bars{
+  display:grid;
+  gap:10px;
+  margin-top:10px
+}
+
+.bar-row{
+  display:grid;
+  grid-template-columns:76px 1fr 68px;
+  align-items:center;
+  gap:8px;
+  font-size:11px;
+  font-weight:700
+}
+
+.bar-bg{
+  height:9px;
+  background:#edf2f8;
+  border-radius:9px;
+  overflow:hidden
+}
+
+.bar{
+  height:100%;
+  background:var(--blue);
+  border-radius:9px
+}
+
+.bar.purple{
+  background:var(--purple)
+}
+
+.table-card{
+  overflow:hidden
+}
+
+.table-card table{
+  width:100%;
+  border-collapse:collapse
+}
+
+.table-card th{
+  text-align:left;
+  color:var(--muted);
+  background:#fbfcfe;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.05em;
+  padding:12px 20px
+}
+
+.table-card td{
+  padding:17px 20px;
+  border-top:1px solid var(--line);
+  font-weight:650
+}
+
+.priority{
+  font-size:10px;
+  font-weight:850;
+  text-transform:uppercase;
+  padding:5px 8px;
+  border-radius:99px;
+  letter-spacing:.04em
+}
+
+.high{
+  background:var(--rose);
+  color:var(--red)
+}
+
+.medium{
+  background:var(--sand);
+  color:var(--amber)
+}
+
+.low{
+  background:var(--pale);
+  color:var(--blue)
+}
+
+.next{
+  padding:24px;
+  margin-top:17px;
+  border:1px solid #d9d0ff;
+  background:linear-gradient(105deg,#fff 5%,#f7f5ff)
+}
+
+.next h2{
+  margin:7px 0;
+  font-size:19px
+}
+
+.next p{
+  max-width:680px;
+  color:var(--muted);
+  margin:0 0 16px
+}
+
+.campaign-summary{
+  padding:20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:17px
+}
+
+.campaign-summary h2{
+  margin:5px 0 0;
+  font-size:19px
+}
+
+.success{
+  color:var(--green);
+  background:var(--mint);
+  font-weight:800;
+  font-size:11px;
+  padding:7px 9px;
+  border-radius:99px
+}
+
+.learn{
+  margin-top:17px;
+  padding:18px;
+  background:var(--mint);
+  border:1px solid #cceedd;
+  color:#176345
+}
+
+.learn b{
+  display:block;
+  margin-bottom:4px
+}
+
+.learn p{
+  margin:0;
+  font-size:12px
+}
+
+.mobile-menu{
+  display:none
+}
+
+.page{
+  display:none
+}
+
+.page.active{
+  display:block
+}
+
+
+/* TABLET */
+@media(max-width:980px){
+
+  .shell{
+    grid-template-columns:76px minmax(0,1fr)
+  }
+
+  .sidebar{
+    padding:20px 10px
+  }
+
+  .brand>div,
+  .nav span,
+  .agent-card{
+    display:none
+  }
+
+  .brand{
+    justify-content:center;
+    padding:0
+  }
+
+  .nav button{
+    justify-content:center;
+    padding:12px
+  }
+
+  .grid2,
+  .sim-grid{
+    grid-template-columns:1fr
+  }
+
+  .kpis{
+    grid-template-columns:repeat(2,1fr)
+  }
+
+  .opportunities{
+    grid-template-columns:1fr
+  }
+
+  .opp p{
+    min-height:0
+  }
+
+  .topbar{
+    padding:0 24px
+  }
+
+  main{
+    padding:28px 24px
+  }
+}
+
+
+/* MOBILE */
+@media(max-width:620px){
+
+  .shell{
+    display:block
+  }
+
+  .sidebar{
+    position:static;
+    height:auto;
+    padding:11px 14px;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    gap:10px
+  }
+
+  .brand{
+    padding:0
+  }
+
+  /*
+    FIX:
+    Previously .nav button .icon was display:none.
+    Now circular icons remain visible on mobile.
+  */
+
+  .nav{
+    display:flex;
+    overflow-x:auto;
+    gap:7px;
+    flex:1;
+
+    /* Hide scrollbar but keep horizontal scrolling */
+    scrollbar-width:none
+  }
+
+  .nav::-webkit-scrollbar{
+    display:none
+  }
+
+  .nav button{
+    width:auto;
+    padding:5px 7px;
+    white-space:nowrap;
+    display:flex;
+    align-items:center;
+    gap:6px;
+    background:transparent;
+    flex-shrink:0
+  }
+
+  /* Visible circular navigation icons */
+  .nav button .icon{
+    display:grid;
+    width:30px;
+    height:30px;
+    min-width:30px;
+    border-radius:50%;
+    background:#1677df;
+    color:#fff;
+    place-items:center;
+    font-size:14px;
+    font-weight:800
+  }
+
+  /* Active tab gets purple circle */
+  .nav button.active .icon{
+    background:#7656e8;
+    color:#fff
+  }
+
+  .nav button:hover .icon{
+    background:#0c66c5
+  }
+
+  .nav button span:last-child{
+    font-size:10px;
+    color:#dce9ff
+  }
+
+  .topbar{
+    height:61px;
+    padding:0 16px
+  }
+
+  .crumb{
+    display:none
+  }
+
+  main{
+    padding:22px 16px 35px
+  }
+
+  .page-head{
+    align-items:flex-start;
+    flex-direction:column;
+    margin-bottom:18px;
+    gap:10px
+  }
+
+  .page-head h1{
+    font-size:23px
+  }
+
+  .kpis,
+  .insights{
+    grid-template-columns:1fr 1fr;
+    gap:10px
+  }
+
+  .metric{
+    padding:14px
+  }
+
+  .metric .value{
+    font-size:20px
+  }
+
+  .grid2{
+    gap:10px;
+    margin-top:10px
+  }
+
+  .section-card{
+    padding:16px
+  }
+
+  .alert-grid{
+    grid-template-columns:1fr
+  }
+
+  .ai-alert{
+    padding:17px
+  }
+
+  .flow{
+    align-items:stretch;
+    gap:10px;
+    overflow-x:auto;
+    justify-content:flex-start
+  }
+
+  .flow-step{
+    min-width:94px
+  }
+
+  .flow-step:not(:last-child):after{
+    right:-10px
+  }
+
+  .campaign-summary{
+    align-items:flex-start;
+    gap:13px;
+    flex-direction:column
+  }
+
+  .table-card{
+    overflow-x:auto
+  }
+
+  .table-card table{
+    min-width:520px
+  }
+
+  .result-metrics{
+    grid-template-columns:1fr 1fr
+  }
+
+  .sample{
+    font-size:10px
+  }
+
+  .actions{
+    justify-content:stretch
+  }
+
+  .actions .btn{
+    width:100%
+  }
+}
+
+
+@media(prefers-reduced-motion:reduce){
+  *{
+    scroll-behavior:auto!important;
+    transition:none!important
+  }
+}
 </style>
-</head><body>
-<div class="shell"><aside class="sidebar" aria-label="Primary navigation"><div class="brand"><div class="brandmark">P</div><div><strong>VYAPARMITRA AI</strong><small>MERCHANT GROWTH AGENT</small></div></div><nav class="nav" id="nav"></nav><div class="agent-card"><span class="agent-dot">● AGENT ACTIVE</span><b>Growth workflow</b><p>Detect · Discover · Simulate · Prioritize · Track · Learn</p></div></aside>
-<div class="content"><header class="topbar"><div class="crumb" id="crumb">OVERVIEW / SYNTHETIC DEMO</div><div class="merchant"><button class="bell" aria-label="Notifications">♢</button><div class="avatar">AC</div><div><div class="mname">Aarav Café</div><div class="location">Noida, India</div></div></div></header>
-<main>
-<section class="page active" id="overview"><div class="page-head"><div><div class="eyebrow">Merchant Growth Agent</div><h1>Merchant Growth Dashboard</h1><p>One clear view of performance, risk, and the next best action.</p></div><div class="sample">Synthetic merchant data · Hackathon prototype</div></div><div class="kpis"><div class="card metric"><div class="label">Total Revenue</div><div class="value">₹1,24,500</div><div class="delta positive">↗ Last 30 days</div></div><div class="card metric"><div class="label">Revenue Growth</div><div class="value negative">-8.4%</div><div class="delta negative">↓ vs. previous month</div></div><div class="card metric"><div class="label">Repeat Customers</div><div class="value">68%</div><div class="delta negative">↓ 18% this month</div></div><div class="card metric"><div class="label">Revenue at Risk</div><div class="value">₹18,000</div><div class="delta negative">Monthly estimate</div></div></div><div class="grid2"><div class="card section-card"><div class="section-title"><h2>Revenue trend</h2><div class="legend"><span><i style="background:#1677df"></i>Revenue</span><span><i style="background:#c4d7eb"></i>Previous period</span></div></div><svg class="chart" viewBox="0 0 600 220" role="img" aria-label="Revenue trend chart for last 7 days"><g stroke="#e7edf5" stroke-width="1"><line x1="36" y1="24" x2="580" y2="24"/><line x1="36" y1="80" x2="580" y2="80"/><line x1="36" y1="136" x2="580" y2="136"/><line x1="36" y1="192" x2="580" y2="192"/></g><g fill="#8796ab" font-size="10"><text x="0" y="27">₹22k</text><text x="0" y="83">₹18k</text><text x="0" y="139">₹14k</text><text x="0" y="195">₹10k</text></g><polyline points="40,111 125,91 210,104 295,59 380,89 465,50 555,76" fill="none" stroke="#c4d7eb" stroke-width="3" stroke-dasharray="5 5"/><path d="M40,132 L125,116 L210,137 L295,98 L380,130 L465,111 L555,151 L555,192 L40,192Z" fill="#eaf4ff"/><polyline points="40,132 125,116 210,137 295,98 380,130 465,111 555,151" fill="none" stroke="#1677df" stroke-width="3"/><g fill="#1677df"><circle cx="40" cy="132" r="4"/><circle cx="125" cy="116" r="4"/><circle cx="210" cy="137" r="4"/><circle cx="295" cy="98" r="4"/><circle cx="380" cy="130" r="4"/><circle cx="465" cy="111" r="4"/><circle cx="555" cy="151" r="4"/></g><g fill="#8796ab" font-size="10"><text x="33" y="213">Mon</text><text x="117" y="213">Tue</text><text x="202" y="213">Wed</text><text x="287" y="213">Thu</text><text x="373" y="213">Fri</text><text x="457" y="213">Sat</text><text x="548" y="213">Sun</text></g></svg></div><div class="card section-card"><div class="section-title"><h2>Customer retention</h2><span>Monthly</span></div><svg class="chart" viewBox="0 0 280 220" role="img" aria-label="Customer retention dropped from 86 percent to 68 percent"><circle cx="140" cy="102" r="70" fill="none" stroke="#e9eef5" stroke-width="18"/><circle cx="140" cy="102" r="70" fill="none" stroke="#1677df" stroke-width="18" stroke-linecap="round" stroke-dasharray="299 440" transform="rotate(-90 140 102)"/><text x="140" y="97" text-anchor="middle" font-size="31" font-weight="800" fill="#12213a">68%</text><text x="140" y="116" text-anchor="middle" font-size="10" fill="#64748b">REPEAT CUSTOMERS</text><text x="55" y="207" font-size="11" fill="#64748b">Previous: <tspan fill="#12213a" font-weight="700">86%</tspan></text></svg></div></div><div class="card ai-alert"><div class="alert-grid"><div><span class="ai-label">✦ AI Detected</span><h2>Revenue Leakage Detected</h2><p>Your repeat customer rate has dropped by 18% this month.</p><p>420 regular customers have not returned in the last 3 weeks.</p><div class="risk">Estimated revenue at risk: ₹18,000/month</div></div><button class="btn" data-go="revenue-insights">View Revenue Insight</button></div></div><div class="card recommend"><div class="spark">✦</div><div><b>Top AI Recommendation</b><p>Launch a targeted retention offer to recover inactive regular customers.</p></div></div></section>
-<section class="page" id="revenue-insights"><div class="page-head"><div><div class="eyebrow">AI Insight</div><h1>Revenue Leakage Detector</h1><p>Identify hidden revenue loss before it becomes a bigger problem.</p></div><span class="warning">Revenue Leakage Detected</span></div><div class="insights"><article class="card insight"><span class="tag">AI Detected</span><h3>Repeat Customer Decline</h3><div class="big">68%</div><p>Previous: 86% <strong class="negative">· -18%</strong></p></article><article class="card insight"><span class="tag">Customer pattern</span><h3>Inactive Regular Customers</h3><div class="big">420</div><p>No purchase in the last 3 weeks</p></article><article class="card insight"><span class="tag">AI Prediction</span><h3>Estimated Revenue at Risk</h3><div class="big negative">₹18,000</div><p>Per month · Confidence: <strong class="positive">High</strong></p></article></div><div class="grid2"><div class="card section-card"><div class="section-title"><h2>Repeat customer rate</h2><div class="legend"><span><i style="background:#7656e8"></i>Last month</span><span><i style="background:#1677df"></i>This month</span></div></div><svg class="chart" viewBox="0 0 600 220" role="img" aria-label="Repeat customer rate line chart comparing last month and this month"><g stroke="#e7edf5"><line x1="35" y1="25" x2="580" y2="25"/><line x1="35" y1="80" x2="580" y2="80"/><line x1="35" y1="135" x2="580" y2="135"/><line x1="35" y1="190" x2="580" y2="190"/></g><g fill="#8796ab" font-size="10"><text x="2" y="28">90%</text><text x="2" y="83">80%</text><text x="2" y="138">70%</text><text x="2" y="193">60%</text></g><polyline points="40,51 145,45 250,58 355,39 460,51 560,48" fill="none" stroke="#7656e8" stroke-width="3"/><polyline points="40,102 145,94 250,118 355,108 460,133 560,141" fill="none" stroke="#1677df" stroke-width="3"/><g fill="#8796ab" font-size="10"><text x="35" y="214">Week 1</text><text x="140" y="214">Week 2</text><text x="245" y="214">Week 3</text><text x="350" y="214">Week 4</text></g></svg></div><aside class="card analysis"><h3>What is happening?</h3><p>Regular customers are visiting less frequently, causing a decline in repeat purchases.</p><h3>Why does it matter?</h3><p>Recovering existing customers may require less effort than acquiring new customers.</p></aside></div><div class="actions"><button class="btn" data-go="opportunities">Find Growth Opportunities</button></div></section>
-<section class="page" id="opportunities"><div class="page-head"><div><div class="eyebrow">AI Opportunity Mining</div><h1>AI Opportunity Center</h1><p>Discover practical growth opportunities from transaction patterns.</p></div><div class="sample">Based on synthetic transaction patterns</div></div><div class="opportunities"><article class="card opp primary"><span class="prominent-label">✦ AI Recommended</span><h2>Recover Inactive Customers</h2><p>420 regular customers have not returned in the last 3 weeks.</p><dl><div><dt>Target customers</dt><dd>420</dd></div><div><dt>Revenue potential</dt><dd>₹18,000</dd></div><div><dt>Confidence</dt><dd class="positive">High</dd></div><div><dt>Effort</dt><dd>Low</dd></div></dl><button class="btn" data-go="simulator">Simulate This Opportunity</button></article><article class="card opp"><span class="tag">AI Insight</span><h2>Evening Coffee + Snack Combo</h2><p>Coffee sales are high, but snack purchases are low during evening hours.</p><dl><div><dt>Potential revenue</dt><dd>₹10,000</dd></div><div><dt>Confidence</dt><dd>Medium</dd></div></dl><button class="btn secondary" data-toast="Evening combo details are available in this hackathon prototype.">View Details</button></article><article class="card opp"><span class="tag">AI Insight</span><h2>Improve Slow Business Hours</h2><p>Sales between 4 PM and 6 PM are below average.</p><dl><div><dt>Potential revenue</dt><dd>₹6,500</dd></div><div><dt>Confidence</dt><dd>Medium</dd></div></dl><button class="btn secondary" data-toast="Slow-hours pattern identified: 4 PM–6 PM.">View Details</button></article></div><div id="toast" aria-live="polite" style="margin-top:15px;color:var(--blue);font-weight:700"></div></section>
-<section class="page" id="simulator"><div class="page-head"><div><div class="eyebrow">AI Prediction Tool</div><h1>What-If Business Simulator</h1><p>Test a business decision before spending money.</p></div><div class="sample">Predictions use mock frontend calculations</div></div><div class="sim-grid"><section class="card form-card"><h2>Simulation inputs</h2><div class="field"><label>Customer segment</label><div class="input-like">Inactive Regular Customers</div></div><div class="field"><label>Action type</label><div class="input-like">Retention Discount</div></div><div class="field"><div class="range-row"><label for="discount">Discount percentage</label><span id="discountLabel">10%</span></div><input id="discount" type="range" min="0" max="20" value="10" aria-label="Discount percentage"></div><div class="field"><label>Campaign duration</label><div class="input-like">7 Days</div></div><button class="btn" id="runSim">Run Simulation</button></section><section class="card result-card"><h2>Simulation Results <span class="tag">AI Prediction</span></h2><div class="result-metrics"><div><small>Customers recovered</small><b id="recovered">120–150</b></div><div><small>Additional revenue</small><b id="revenue">₹18,000</b></div><div><small>Campaign cost</small><b id="cost">₹4,500</b></div><div><small>Expected profit impact</small><b class="positive" id="profit">Positive</b></div><div><small>Risk level</small><b id="riskLevel">Medium</b></div></div><div class="compare"><b style="font-size:12px">Estimated revenue impact</b><div class="bars"><div class="bar-row"><span>No Offer</span><div class="bar-bg"><div class="bar" style="width:16%;background:#aab8c9"></div></div><strong>₹0</strong></div><div class="bar-row"><span>5% Offer</span><div class="bar-bg"><div class="bar" style="width:59%"></div></div><strong>₹10,500</strong></div><div class="bar-row"><span id="offerName">10% Offer</span><div class="bar-bg"><div class="bar purple" id="offerBar" style="width:100%"></div></div><strong id="offerRev">₹18,000</strong></div></div></div><div class="explain" id="explanation">A 10% targeted retention offer is expected to recover inactive customers while maintaining a positive revenue impact.</div><button class="btn" data-go="recommended-actions">Prioritize This Action</button></section></div></section>
-<section class="page" id="recommended-actions"><div class="page-head"><div><div class="eyebrow">AI Decision Layer</div><h1>Smart Action Prioritizer</h1><p>Tell the merchant what to do first.</p></div></div><p style="color:var(--muted);max-width:650px;margin:-9px 0 18px">The AI ranks business actions based on expected revenue impact, urgency, effort, confidence, and risk.</p><div class="card table-card"><table><thead><tr><th>Priority</th><th>Action</th><th>Expected impact</th><th>Why now</th></tr></thead><tbody><tr><td><span class="priority high">High</span></td><td>Launch targeted retention offer</td><td>₹18,000</td><td>High confidence, low effort</td></tr><tr><td><span class="priority medium">Medium</span></td><td>Evening combo promotion</td><td>₹10,000</td><td>Promising cross-sell signal</td></tr><tr><td><span class="priority low">Low</span></td><td>Promote slow-moving products</td><td>₹4,000</td><td>Lower urgency</td></tr></tbody></table></div><section class="card next"><span class="tag" style="color:var(--purple)">✦ AI Recommended</span><h2>Recommended Next Action</h2><p>Launch the targeted retention offer first. It addresses the detected revenue leakage and offers the highest expected impact with low implementation effort.</p><button class="btn" data-go="campaign-results">Approve and Track Campaign</button><span style="display:block;color:var(--muted);font-size:11px;margin-top:10px">Merchant approval required — the AI does not execute campaigns automatically.</span></section></section>
-<section class="page" id="campaign-results"><div class="page-head"><div><div class="eyebrow">AI Learning Loop</div><h1>Closed-Loop Growth Tracking</h1><p>Measure actual results and improve future recommendations.</p></div></div><div class="card flow"><div class="flow-step"><div class="flow-ico">✦</div>AI Prediction</div><div class="flow-step"><div class="flow-ico">✓</div>Merchant Approval</div><div class="flow-step"><div class="flow-ico">↗</div>Action Executed</div><div class="flow-step"><div class="flow-ico">◉</div>Actual Results Measured</div><div class="flow-step"><div class="flow-ico">↻</div>AI Recommendations Improved</div></div><div class="card campaign-summary"><div><span class="tag">Campaign</span><h2>10% Retention Offer</h2></div><span class="success">● SUCCESSFUL</span></div><div class="kpis"><div class="card metric"><div class="label">Customers Recovered</div><div class="value">138</div><div class="delta positive">Within predicted range</div></div><div class="card metric"><div class="label">Additional Revenue</div><div class="value">₹16,500</div><div class="delta positive">Positive result</div></div><div class="card metric"><div class="label">Prediction Accuracy</div><div class="value">92%</div><div class="delta positive">Learning signal recorded</div></div><div class="card metric"><div class="label">Campaign Status</div><div class="value positive">Successful</div><div class="delta positive">7-day campaign complete</div></div></div><div class="grid2"><div class="card section-card"><div class="section-title"><h2>Predicted vs Actual</h2><span>Campaign outcome</span></div><div class="bars" style="margin-top:25px"><div class="bar-row"><span>Predicted customers</span><div class="bar-bg"><div class="bar purple" style="width:89%"></div></div><strong>120–150</strong></div><div class="bar-row"><span>Actual customers</span><div class="bar-bg"><div class="bar" style="width:92%"></div></div><strong>138</strong></div><div class="bar-row"><span>Predicted revenue</span><div class="bar-bg"><div class="bar purple" style="width:100%"></div></div><strong>₹18,000</strong></div><div class="bar-row"><span>Actual revenue</span><div class="bar-bg"><div class="bar" style="width:92%"></div></div><strong>₹16,500</strong></div></div></div><aside class="card learn"><b>✦ AI Learning</b><p>The campaign performed close to expectations. Future retention recommendations will use this result to improve prediction accuracy.</p></aside></div><div class="actions"><button class="btn" data-go="overview">Back to Dashboard</button></div></section>
-</main></div></div>
+</head>
+
+<body>
+
+<div class="shell">
+
+  <aside class="sidebar" aria-label="Primary navigation">
+
+    <div class="brand">
+      <div class="brandmark">P</div>
+
+      <div>
+        <strong>VYAPARMITRA AI</strong>
+        <small>MERCHANT GROWTH AGENT</small>
+      </div>
+    </div>
+
+    <nav class="nav" id="nav"></nav>
+
+    <div class="agent-card">
+      <span class="agent-dot">● AGENT ACTIVE</span>
+      <b>Growth workflow</b>
+      <p>Detect · Discover · Simulate · Prioritize · Track · Learn</p>
+    </div>
+
+  </aside>
+
+
+  <div class="content">
+
+    <header class="topbar">
+
+      <div class="crumb" id="crumb">
+        OVERVIEW / SYNTHETIC DEMO
+      </div>
+
+      <div class="merchant">
+
+        <button class="bell" aria-label="Notifications">
+          ♢
+        </button>
+
+        <div class="avatar">
+          AC
+        </div>
+
+        <div>
+          <div class="mname">
+            Aarav Café
+          </div>
+
+          <div class="location">
+            Noida, India
+          </div>
+        </div>
+
+      </div>
+
+    </header>
+
+
+    <main>
+
+      <!-- OVERVIEW -->
+
+      <section class="page active" id="overview">
+
+        <div class="page-head">
+
+          <div>
+
+            <div class="eyebrow">
+              Merchant Growth Agent
+            </div>
+
+            <h1>
+              Merchant Growth Dashboard
+            </h1>
+
+            <p>
+              One clear view of performance, risk, and the next best action.
+            </p>
+
+          </div>
+
+          <div class="sample">
+            Synthetic merchant data · Hackathon prototype
+          </div>
+
+        </div>
+
+
+        <div class="kpis">
+
+          <div class="card metric">
+
+            <div class="label">
+              Total Revenue
+            </div>
+
+            <div class="value">
+              ₹1,24,500
+            </div>
+
+            <div class="delta positive">
+              ↗ Last 30 days
+            </div>
+
+          </div>
+
+
+          <div class="card metric">
+
+            <div class="label">
+              Revenue Growth
+            </div>
+
+            <div class="value negative">
+              -8.4%
+            </div>
+
+            <div class="delta negative">
+              ↓ vs. previous month
+            </div>
+
+          </div>
+
+
+          <div class="card metric">
+
+            <div class="label">
+              Repeat Customers
+            </div>
+
+            <div class="value">
+              68%
+            </div>
+
+            <div class="delta negative">
+              ↓ 18% this month
+            </div>
+
+          </div>
+
+
+          <div class="card metric">
+
+            <div class="label">
+              Revenue at Risk
+            </div>
+
+            <div class="value">
+              ₹18,000
+            </div>
+
+            <div class="delta negative">
+              Monthly estimate
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="grid2">
+
+          <div class="card section-card">
+
+            <div class="section-title">
+
+              <h2>
+                Revenue trend
+              </h2>
+
+              <div class="legend">
+
+                <span>
+                  <i style="background:#1677df"></i>
+                  Revenue
+                </span>
+
+                <span>
+                  <i style="background:#c4d7eb"></i>
+                  Previous period
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <svg
+              class="chart"
+              viewBox="0 0 600 220"
+              role="img"
+              aria-label="Revenue trend chart for last 7 days"
+            >
+
+              <g stroke="#e7edf5" stroke-width="1">
+
+                <line x1="36" y1="24" x2="580" y2="24"/>
+                <line x1="36" y1="80" x2="580" y2="80"/>
+                <line x1="36" y1="136" x2="580" y2="136"/>
+                <line x1="36" y1="192" x2="580" y2="192"/>
+
+              </g>
+
+
+              <g fill="#8796ab" font-size="10">
+
+                <text x="0" y="27">₹22k</text>
+                <text x="0" y="83">₹18k</text>
+                <text x="0" y="139">₹14k</text>
+                <text x="0" y="195">₹10k</text>
+
+              </g>
+
+
+              <polyline
+                points="40,111 125,91 210,104 295,59 380,89 465,50 555,76"
+                fill="none"
+                stroke="#c4d7eb"
+                stroke-width="3"
+                stroke-dasharray="5 5"
+              />
+
+
+              <path
+                d="M40,132 L125,116 L210,137 L295,98 L380,130 L465,111 L555,151 L555,192 L40,192Z"
+                fill="#eaf4ff"
+              />
+
+
+              <polyline
+                points="40,132 125,116 210,137 295,98 380,130 465,111 555,151"
+                fill="none"
+                stroke="#1677df"
+                stroke-width="3"
+              />
+
+
+              <g fill="#1677df">
+
+                <circle cx="40" cy="132" r="4"/>
+                <circle cx="125" cy="116" r="4"/>
+                <circle cx="210" cy="137" r="4"/>
+                <circle cx="295" cy="98" r="4"/>
+                <circle cx="380" cy="130" r="4"/>
+                <circle cx="465" cy="111" r="4"/>
+                <circle cx="555" cy="151" r="4"/>
+
+              </g>
+
+
+              <g fill="#8796ab" font-size="10">
+
+                <text x="33" y="213">Mon</text>
+                <text x="117" y="213">Tue</text>
+                <text x="202" y="213">Wed</text>
+                <text x="287" y="213">Thu</text>
+                <text x="373" y="213">Fri</text>
+                <text x="457" y="213">Sat</text>
+                <text x="548" y="213">Sun</text>
+
+              </g>
+
+            </svg>
+
+          </div>
+
+
+          <div class="card section-card">
+
+            <div class="section-title">
+
+              <h2>
+                Customer retention
+              </h2>
+
+              <span>
+                Monthly
+              </span>
+
+            </div>
+
+
+            <svg
+              class="chart"
+              viewBox="0 0 280 220"
+              role="img"
+              aria-label="Customer retention dropped from 86 percent to 68 percent"
+            >
+
+              <circle
+                cx="140"
+                cy="102"
+                r="70"
+                fill="none"
+                stroke="#e9eef5"
+                stroke-width="18"
+              />
+
+              <circle
+                cx="140"
+                cy="102"
+                r="70"
+                fill="none"
+                stroke="#1677df"
+                stroke-width="18"
+                stroke-linecap="round"
+                stroke-dasharray="299 440"
+                transform="rotate(-90 140 102)"
+              />
+
+              <text
+                x="140"
+                y="97"
+                text-anchor="middle"
+                font-size="31"
+                font-weight="800"
+                fill="#12213a"
+              >
+                68%
+              </text>
+
+              <text
+                x="140"
+                y="116"
+                text-anchor="middle"
+                font-size="10"
+                fill="#64748b"
+              >
+                REPEAT CUSTOMERS
+              </text>
+
+              <text
+                x="55"
+                y="207"
+                font-size="11"
+                fill="#64748b"
+              >
+                Previous:
+                <tspan
+                  fill="#12213a"
+                  font-weight="700"
+                >
+                  86%
+                </tspan>
+              </text>
+
+            </svg>
+
+          </div>
+
+        </div>
+
+
+        <div class="card ai-alert">
+
+          <div class="alert-grid">
+
+            <div>
+
+              <span class="ai-label">
+                ✦ AI Detected
+              </span>
+
+              <h2>
+                Revenue Leakage Detected
+              </h2>
+
+              <p>
+                Your repeat customer rate has dropped by 18% this month.
+              </p>
+
+              <p>
+                420 regular customers have not returned in the last 3 weeks.
+              </p>
+
+              <div class="risk">
+                Estimated revenue at risk: ₹18,000/month
+              </div>
+
+            </div>
+
+            <button
+              class="btn"
+              data-go="revenue-insights"
+            >
+              View Revenue Insight
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <div class="card recommend">
+
+          <div class="spark">
+            ✦
+          </div>
+
+          <div>
+
+            <b>
+              Top AI Recommendation
+            </b>
+
+            <p>
+              Launch a targeted retention offer to recover inactive regular customers.
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- REVENUE INSIGHTS -->
+
+      <section
+        class="page"
+        id="revenue-insights"
+      >
+
+        <div class="page-head">
+
+          <div>
+
+            <div class="eyebrow">
+              AI Insight
+            </div>
+
+            <h1>
+              Revenue Leakage Detector
+            </h1>
+
+            <p>
+              Identify hidden revenue loss before it becomes a bigger problem.
+            </p>
+
+          </div>
+
+          <span class="warning">
+            Revenue Leakage Detected
+          </span>
+
+        </div>
+
+
+        <div class="insights">
+
+          <article class="card insight">
+
+            <span class="tag">
+              AI Detected
+            </span>
+
+            <h3>
+              Repeat Customer Decline
+            </h3>
+
+            <div class="big">
+              68%
+            </div>
+
+            <p>
+              Previous: 86%
+              <strong class="negative">
+                · -18%
+              </strong>
+            </p>
+
+          </article>
+
+
+          <article class="card insight">
+
+            <span class="tag">
+              Customer pattern
+            </span>
+
+            <h3>
+              Inactive Regular Customers
+            </h3>
+
+            <div class="big">
+              420
+            </div>
+
+            <p>
+              No purchase in the last 3 weeks
+            </p>
+
+          </article>
+
+
+          <article class="card insight">
+
+            <span class="tag">
+              AI Prediction
+            </span>
+
+            <h3>
+              Estimated Revenue at Risk
+            </h3>
+
+            <div class="big negative">
+              ₹18,000
+            </div>
+
+            <p>
+              Per month · Confidence:
+              <strong class="positive">
+                High
+              </strong>
+            </p>
+
+          </article>
+
+        </div>
+
+
+        <div class="grid2">
+
+          <div class="card section-card">
+
+            <div class="section-title">
+
+              <h2>
+                Repeat customer rate
+              </h2>
+
+              <div class="legend">
+
+                <span>
+                  <i style="background:#7656e8"></i>
+                  Last month
+                </span>
+
+                <span>
+                  <i style="background:#1677df"></i>
+                  This month
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <svg
+              class="chart"
+              viewBox="0 0 600 220"
+              role="img"
+              aria-label="Repeat customer rate line chart comparing last month and this month"
+            >
+
+              <g stroke="#e7edf5">
+
+                <line x1="35" y1="25" x2="580" y2="25"/>
+                <line x1="35" y1="80" x2="580" y2="80"/>
+                <line x1="35" y1="135" x2="580" y2="135"/>
+                <line x1="35" y1="190" x2="580" y2="190"/>
+
+              </g>
+
+
+              <g fill="#8796ab" font-size="10">
+
+                <text x="2" y="28">90%</text>
+                <text x="2" y="83">80%</text>
+                <text x="2" y="138">70%</text>
+                <text x="2" y="193">60%</text>
+
+              </g>
+
+
+              <polyline
+                points="40,51 145,45 250,58 355,39 460,51 560,48"
+                fill="none"
+                stroke="#7656e8"
+                stroke-width="3"
+              />
+
+              <polyline
+                points="40,102 145,94 250,118 355,108 460,133 560,141"
+                fill="none"
+                stroke="#1677df"
+                stroke-width="3"
+              />
+
+
+              <g fill="#8796ab" font-size="10">
+
+                <text x="35" y="214">Week 1</text>
+                <text x="140" y="214">Week 2</text>
+                <text x="245" y="214">Week 3</text>
+                <text x="350" y="214">Week 4</text>
+
+              </g>
+
+            </svg>
+
+          </div>
+
+
+          <aside class="card analysis">
+
+            <h3>
+              What is happening?
+            </h3>
+
+            <p>
+              Regular customers are visiting less frequently, causing a decline in repeat purchases.
+            </p>
+
+            <h3>
+              Why does it matter?
+            </h3>
+
+            <p>
+              Recovering existing customers may require less effort than acquiring new customers.
+            </p>
+
+          </aside>
+
+        </div>
+
+
+        <div class="actions">
+
+          <button
+            class="btn"
+            data-go="opportunities"
+          >
+            Find Growth Opportunities
+          </button>
+
+        </div>
+
+      </section>
+
+
+      <!-- OPPORTUNITIES -->
+
+      <section
+        class="page"
+        id="opportunities"
+      >
+
+        <div class="page-head">
+
+          <div>
+
+            <div class="eyebrow">
+              AI Opportunity Mining
+            </div>
+
+            <h1>
+              AI Opportunity Center
+            </h1>
+
+            <p>
+              Discover practical growth opportunities from transaction patterns.
+            </p>
+
+          </div>
+
+          <div class="sample">
+            Based on synthetic transaction patterns
+          </div>
+
+        </div>
+
+
+        <div class="opportunities">
+
+          <article class="card opp primary">
+
+            <span class="prominent-label">
+              ✦ AI Recommended
+            </span>
+
+            <h2>
+              Recover Inactive Customers
+            </h2>
+
+            <p>
+              420 regular customers have not returned in the last 3 weeks.
+            </p>
+
+
+            <dl>
+
+              <div>
+                <dt>
+                  Target customers
+                </dt>
+
+                <dd>
+                  420
+                </dd>
+              </div>
+
+              <div>
+                <dt>
+                  Revenue potential
+                </dt>
+
+                <dd>
+                  ₹18,000
+                </dd>
+              </div>
+
+              <div>
+                <dt>
+                  Confidence
+                </dt>
+
+                <dd class="positive">
+                  High
+                </dd>
+              </div>
+
+              <div>
+                <dt>
+                  Effort
+                </dt>
+
+                <dd>
+                  Low
+                </dd>
+              </div>
+
+            </dl>
+
+
+            <button
+              class="btn"
+              data-go="simulator"
+            >
+              Simulate This Opportunity
+            </button>
+
+          </article>
+
+
+          <article class="card opp">
+
+            <span class="tag">
+              AI Insight
+            </span>
+
+            <h2>
+              Evening Coffee + Snack Combo
+            </h2>
+
+            <p>
+              Coffee sales are high, but snack purchases are low during evening hours.
+            </p>
+
+
+            <dl>
+
+              <div>
+                <dt>
+                  Potential revenue
+                </dt>
+
+                <dd>
+                  ₹10,000
+                </dd>
+              </div>
+
+              <div>
+                <dt>
+                  Confidence
+                </dt>
+
+                <dd>
+                  Medium
+                </dd>
+              </div>
+
+            </dl>
+
+
+            <button
+              class="btn secondary"
+              data-toast="Evening combo details are available in this hackathon prototype."
+            >
+              View Details
+            </button>
+
+          </article>
+
+
+          <article class="card opp">
+
+            <span class="tag">
+              AI Insight
+            </span>
+
+            <h2>
+              Improve Slow Business Hours
+            </h2>
+
+            <p>
+              Sales between 4 PM and 6 PM are below average.
+            </p>
+
+
+            <dl>
+
+              <div>
+                <dt>
+                  Potential revenue
+                </dt>
+
+                <dd>
+                  ₹6,500
+                </dd>
+              </div>
+
+              <div>
+                <dt>
+                  Confidence
+                </dt>
+
+                <dd>
+                  Medium
+                </dd>
+              </div>
+
+            </dl>
+
+
+            <button
+              class="btn secondary"
+              data-toast="Slow-hours pattern identified: 4 PM–6 PM."
+            >
+              View Details
+            </button>
+
+          </article>
+
+        </div>
+
+
+        <div
+          id="toast"
+          aria-live="polite"
+          style="margin-top:15px;color:var(--blue);font-weight:700"
+        ></div>
+
+      </section>
+
+
+      <!-- SIMULATOR -->
+
+      <section
+        class="page"
+        id="simulator"
+      >
+
+        <div class="page-head">
+
+          <div>
+
+            <div class="eyebrow">
+              AI Prediction Tool
+            </div>
+
+            <h1>
+              What-If Business Simulator
+            </h1>
+
+            <p>
+              Test a business decision before spending money.
+            </p>
+
+          </div>
+
+          <div class="sample">
+            Predictions use mock frontend calculations
+          </div>
+
+        </div>
+
+
+        <div class="sim-grid">
+
+          <section class="card form-card">
+
+            <h2>
+              Simulation inputs
+            </h2>
+
+
+            <div class="field">
+
+              <label>
+                Customer segment
+              </label>
+
+              <div class="input-like">
+                Inactive Regular Customers
+              </div>
+
+            </div>
+
+
+            <div class="field">
+
+              <label>
+                Action type
+              </label>
+
+              <div class="input-like">
+                Retention Discount
+              </div>
+
+            </div>
+
+
+            <div class="field">
+
+              <div class="range-row">
+
+                <label for="discount">
+                  Discount percentage
+                </label>
+
+                <span id="discountLabel">
+                  10%
+                </span>
+
+              </div>
+
+              <input
+                id="discount"
+                type="range"
+                min="0"
+                max="20"
+                value="10"
+                aria-label="Discount percentage"
+              >
+
+            </div>
+
+
+            <div class="field">
+
+              <label>
+                Campaign duration
+              </label>
+
+              <div class="input-like">
+                7 Days
+              </div>
+
+            </div>
+
+
+            <button
+              class="btn"
+              id="runSim"
+            >
+              Run Simulation
+            </button>
+
+          </section>
+
+
+          <section class="card result-card">
+
+            <h2>
+              Simulation Results
+              <span class="tag">
+                AI Prediction
+              </span>
+            </h2>
+
+
+            <div class="result-metrics">
+
+              <div>
+
+                <small>
+                  Customers recovered
+                </small>
+
+                <b id="recovered">
+                  120–150
+                </b>
+
+              </div>
+
+
+              <div>
+
+                <small>
+                  Additional revenue
+                </small>
+
+                <b id="revenue">
+                  ₹18,000
+                </b>
+
+              </div>
+
+
+              <div>
+
+                <small>
+                  Campaign cost
+                </small>
+
+                <b id="cost">
+                  ₹4,500
+                </b>
+
+              </div>
+
+
+              <div>
+
+                <small>
+                  Expected profit impact
+                </small>
+
+                <b
+                  class="positive"
+                  id="profit"
+                >
+                  Positive
+                </b>
+
+              </div>
+
+
+              <div>
+
+                <small>
+                  Risk level
+                </small>
+
+                <b id="riskLevel">
+                  Medium
+                </b>
+
+              </div>
+
+            </div>
+
+
+            <div class="compare">
+
+              <b style="font-size:12px">
+                Estimated revenue impact
+              </b>
+
+
+              <div class="bars">
+
+                <div class="bar-row">
+
+                  <span>
+                    No Offer
+                  </span>
+
+                  <div class="bar-bg">
+
+                    <div
+                      class="bar"
+                      style="width:16%;background:#aab8c9"
+                    ></div>
+
+                  </div>
+
+                  <strong>
+                    ₹0
+                  </strong>
+
+                </div>
+
+
+                <div class="bar-row">
+
+                  <span>
+                    5% Offer
+                  </span>
+
+                  <div class="bar-bg">
+
+                    <div
+                      class="bar"
+                      style="width:59%"
+                    ></div>
+
+                  </div>
+
+                  <strong>
+                    ₹10,500
+                  </strong>
+
+                </div>
+
+
+                <div class="bar-row">
+
+                  <span id="offerName">
+                    10% Offer
+                  </span>
+
+                  <div class="bar-bg">
+
+                    <div
+                      class="bar purple"
+                      id="offerBar"
+                      style="width:100%"
+                    ></div>
+
+                  </div>
+
+                  <strong id="offerRev">
+                    ₹18,000
+                  </strong>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div
+              class="explain"
+              id="explanation"
+            >
+              A 10% targeted retention offer is expected to recover inactive customers while maintaining a positive revenue impact.
+            </div>
+
+
+            <button
+              class="btn"
+              data-go="recommended-actions"
+            >
+              Prioritize This Action
+            </button>
+
+          </section>
+
+        </div>
+
+      </section>
+
+
+      <!-- RECOMMENDED ACTIONS -->
+
+      <section
+        class="page"
+        id="recommended-actions"
+      >
+
+        <div class="page-head">
+
+          <div>
+
+            <div class="eyebrow">
+              AI Decision Layer
+            </div>
+
+            <h1>
+              Smart Action Prioritizer
+            </h1>
+
+            <p>
+              Tell the merchant what to do first.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <p
+          style="color:var(--muted);max-width:650px;margin:-9px 0 18px"
+        >
+          The AI ranks business actions based on expected revenue impact, urgency, effort, confidence, and risk.
+        </p>
+
+
+        <div class="card table-card">
+
+          <table>
+
+            <thead>
+
+              <tr>
+
+                <th>
+                  Priority
+                </th>
+
+                <th>
+                  Action
+                </th>
+
+                <th>
+                  Expected impact
+                </th>
+
+                <th>
+                  Why now
+                </th>
+
+              </tr>
+
+            </thead>
+
+
+            <tbody>
+
+              <tr>
+
+                <td>
+                  <span class="priority high">
+                    High
+                  </span>
+                </td>
+
+                <td>
+                  Launch targeted retention offer
+                </td>
+
+                <td>
+                  ₹18,000
+                </td>
+
+                <td>
+                  High confidence, low effort
+                </td>
+
+              </tr>
+
+
+              <tr>
+
+                <td>
+                  <span class="priority medium">
+                    Medium
+                  </span>
+                </td>
+
+                <td>
+                  Evening combo promotion
+                </td>
+
+                <td>
+                  ₹10,000
+                </td>
+
+                <td>
+                  Promising cross-sell signal
+                </td>
+
+              </tr>
+
+
+              <tr>
+
+                <td>
+                  <span class="priority low">
+                    Low
+                  </span>
+                </td>
+
+                <td>
+                  Promote slow-moving products
+                </td>
+
+                <td>
+                  ₹4,000
+                </td>
+
+                <td>
+                  Lower urgency
+                </td>
+
+              </tr>
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+
+        <section class="card next">
+
+          <span
+            class="tag"
+            style="color:var(--purple)"
+          >
+            ✦ AI Recommended
+          </span>
+
+          <h2>
+            Recommended Next Action
+          </h2>
+
+          <p>
+            Launch the targeted retention offer first. It addresses the detected revenue leakage and offers the highest expected impact with low implementation effort.
+          </p>
+
+          <button
+            class="btn"
+            data-go="campaign-results"
+          >
+            Approve and Track Campaign
+          </button>
+
+          <span
+            style="display:block;color:var(--muted);font-size:11px;margin-top:10px"
+          >
+            Merchant approval required — the AI does not execute campaigns automatically.
+          </span>
+
+        </section>
+
+      </section>
+
+
+      <!-- CAMPAIGN RESULTS -->
+
+      <section
+        class="page"
+        id="campaign-results"
+      >
+
+        <div class="page-head">
+
+          <div>
+
+            <div class="eyebrow">
+              AI Learning Loop
+            </div>
+
+            <h1>
+              Closed-Loop Growth Tracking
+            </h1>
+
+            <p>
+              Measure actual results and improve future recommendations.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="card flow">
+
+          <div class="flow-step">
+
+            <div class="flow-ico">
+              ✦
+            </div>
+
+            AI Prediction
+
+          </div>
+
+
+          <div class="flow-step">
+
+            <div class="flow-ico">
+              ✓
+            </div>
+
+            Merchant Approval
+
+          </div>
+
+
+          <div class="flow-step">
+
+            <div class="flow-ico">
+              ↗
+            </div>
+
+            Action Executed
+
+          </div>
+
+
+          <div class="flow-step">
+
+            <div class="flow-ico">
+              ◉
+            </div>
+
+            Actual Results Measured
+
+          </div>
+
+
+          <div class="flow-step">
+
+            <div class="flow-ico">
+              ↻
+            </div>
+
+            AI Recommendations Improved
+
+          </div>
+
+        </div>
+
+
+        <div class="card campaign-summary">
+
+          <div>
+
+            <span class="tag">
+              Campaign
+            </span>
+
+            <h2>
+              10% Retention Offer
+            </h2>
+
+          </div>
+
+          <span class="success">
+            ● SUCCESSFUL
+          </span>
+
+        </div>
+
+
+        <div class="kpis">
+
+          <div class="card metric">
+
+            <div class="label">
+              Customers Recovered
+            </div>
+
+            <div class="value">
+              138
+            </div>
+
+            <div class="delta positive">
+              Within predicted range
+            </div>
+
+          </div>
+
+
+          <div class="card metric">
+
+            <div class="label">
+              Additional Revenue
+            </div>
+
+            <div class="value">
+              ₹16,500
+            </div>
+
+            <div class="delta positive">
+              Positive result
+            </div>
+
+          </div>
+
+
+          <div class="card metric">
+
+            <div class="label">
+              Prediction Accuracy
+            </div>
+
+            <div class="value">
+              92%
+            </div>
+
+            <div class="delta positive">
+              Learning signal recorded
+            </div>
+
+          </div>
+
+
+          <div class="card metric">
+
+            <div class="label">
+              Campaign Status
+            </div>
+
+            <div class="value positive">
+              Successful
+            </div>
+
+            <div class="delta positive">
+              7-day campaign complete
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="grid2">
+
+          <div class="card section-card">
+
+            <div class="section-title">
+
+              <h2>
+                Predicted vs Actual
+              </h2>
+
+              <span>
+                Campaign outcome
+              </span>
+
+            </div>
+
+
+            <div
+              class="bars"
+              style="margin-top:25px"
+            >
+
+              <div class="bar-row">
+
+                <span>
+                  Predicted customers
+                </span>
+
+                <div class="bar-bg">
+
+                  <div
+                    class="bar purple"
+                    style="width:89%"
+                  ></div>
+
+                </div>
+
+                <strong>
+                  120–150
+                </strong>
+
+              </div>
+
+
+              <div class="bar-row">
+
+                <span>
+                  Actual customers
+                </span>
+
+                <div class="bar-bg">
+
+                  <div
+                    class="bar"
+                    style="width:92%"
+                  ></div>
+
+                </div>
+
+                <strong>
+                  138
+                </strong>
+
+              </div>
+
+
+              <div class="bar-row">
+
+                <span>
+                  Predicted revenue
+                </span>
+
+                <div class="bar-bg">
+
+                  <div
+                    class="bar purple"
+                    style="width:100%"
+                  ></div>
+
+                </div>
+
+                <strong>
+                  ₹18,000
+                </strong>
+
+              </div>
+
+
+              <div class="bar-row">
+
+                <span>
+                  Actual revenue
+                </span>
+
+                <div class="bar-bg">
+
+                  <div
+                    class="bar"
+                    style="width:92%"
+                  ></div>
+
+                </div>
+
+                <strong>
+                  ₹16,500
+                </strong>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <aside class="card learn">
+
+            <b>
+              ✦ AI Learning
+            </b>
+
+            <p>
+              The campaign performed close to expectations. Future retention recommendations will use this result to improve prediction accuracy.
+            </p>
+
+          </aside>
+
+        </div>
+
+
+        <div class="actions">
+
+          <button
+            class="btn"
+            data-go="overview"
+          >
+            Back to Dashboard
+          </button>
+
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+</div>
+
+
 <script>
-const pages={overview:'Overview', 'revenue-insights':'Revenue Insights',opportunities:'Opportunities',simulator:'What-If Simulator','recommended-actions':'Recommended Actions','campaign-results':'Campaign Results'};
-const icons={overview:'⌂','revenue-insights':'◔',opportunities:'✦',simulator:'⌁','recommended-actions':'☷','campaign-results':'↗'};
-const nav=document.getElementById('nav');Object.entries(pages).forEach(([id,label])=>{const b=document.createElement('button');b.dataset.go=id;b.innerHTML=`<span class="icon">${icons[id]}</span><span>${label}</span>`;nav.appendChild(b)});
-function go(id){document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id===id));document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.go===id));document.getElementById('crumb').textContent=pages[id].toUpperCase()+' / SYNTHETIC DEMO';window.scrollTo({top:0,behavior:'smooth'})}
-document.addEventListener('click',e=>{const b=e.target.closest('[data-go]');if(b)go(b.dataset.go);const toast=e.target.closest('[data-toast]');if(toast){document.getElementById('toast').textContent=toast.dataset.toast;setTimeout(()=>document.getElementById('toast').textContent='',3500)}});go('overview');
-const slider=document.getElementById('discount');function updateSim(){const d=+slider.value,rec=Math.round(70+d*6),lo=Math.max(0,rec-15),hi=rec+15,rev=Math.round((d*1650+1500)/500)*500,cost=Math.round((d*420+300)/100)*100;document.getElementById('discountLabel').textContent=d+'%';document.getElementById('recovered').textContent=lo+'–'+hi;document.getElementById('revenue').textContent='₹'+rev.toLocaleString('en-IN');document.getElementById('cost').textContent='₹'+cost.toLocaleString('en-IN');document.getElementById('offerName').textContent=d+'% Offer';document.getElementById('offerRev').textContent='₹'+rev.toLocaleString('en-IN');document.getElementById('offerBar').style.width=Math.min(100,30+d*7)+'%';document.getElementById('riskLevel').textContent=d>14?'High':d<6?'Low':'Medium';document.getElementById('explanation').textContent=`A ${d}% targeted retention offer is expected to recover inactive customers while maintaining a ${d>16?'lower':'positive'} revenue impact.`}slider.addEventListener('input',updateSim);document.getElementById('runSim').addEventListener('click',()=>{updateSim();document.getElementById('runSim').textContent='Simulation Updated';setTimeout(()=>document.getElementById('runSim').textContent='Run Simulation',1600)});
-</script></body></html>
+
+const pages = {
+  overview:'Overview',
+  'revenue-insights':'Revenue Insights',
+  opportunities:'Opportunities',
+  simulator:'What-If Simulator',
+  'recommended-actions':'Recommended Actions',
+  'campaign-results':'Campaign Results'
+};
+
+
+const icons = {
+  overview:'⌂',
+  'revenue-insights':'◔',
+  opportunities:'✦',
+  simulator:'⌁',
+  'recommended-actions':'☷',
+  'campaign-results':'↗'
+};
+
+
+const nav = document.getElementById('nav');
+
+
+Object.entries(pages).forEach(([id,label]) => {
+
+  const b = document.createElement('button');
+
+  b.dataset.go = id;
+
+  b.innerHTML = `
+    <span class="icon">${icons[id]}</span>
+    <span>${label}</span>
+  `;
+
+  nav.appendChild(b);
+
+});
+
+
+function go(id){
+
+  document
+    .querySelectorAll('.page')
+    .forEach(p =>
+      p.classList.toggle('active',p.id === id)
+    );
+
+
+  document
+    .querySelectorAll('.nav button')
+    .forEach(b =>
+      b.classList.toggle('active',b.dataset.go === id)
+    );
+
+
+  document.getElementById('crumb').textContent =
+    pages[id].toUpperCase() + ' / SYNTHETIC DEMO';
+
+
+  window.scrollTo({
+    top:0,
+    behavior:'smooth'
+  });
+
+}
+
+
+document.addEventListener('click',e => {
+
+  const b = e.target.closest('[data-go]');
+
+  if(b){
+    go(b.dataset.go);
+  }
+
+
+  const toast = e.target.closest('[data-toast]');
+
+  if(toast){
+
+    document.getElementById('toast').textContent =
+      toast.dataset.toast;
+
+    setTimeout(() => {
+
+      document.getElementById('toast').textContent = '';
+
+    },3500);
+
+  }
+
+});
+
+
+go('overview');
+
+
+const slider =
+  document.getElementById('discount');
+
+
+function updateSim(){
+
+  const d = +slider.value;
+
+  const rec =
+    Math.round(70 + d * 6);
+
+  const lo =
+    Math.max(0,rec - 15);
+
+  const hi =
+    rec + 15;
+
+  const rev =
+    Math.round((d * 1650 + 1500) / 500) * 500;
+
+  const cost =
+    Math.round((d * 420 + 300) / 100) * 100;
+
+
+  document.getElementById('discountLabel').textContent =
+    d + '%';
+
+
+  document.getElementById('recovered').textContent =
+    lo + '–' + hi;
+
+
+  document.getElementById('revenue').textContent =
+    '₹' + rev.toLocaleString('en-IN');
+
+
+  document.getElementById('cost').textContent =
+    '₹' + cost.toLocaleString('en-IN');
+
+
+  document.getElementById('offerName').textContent =
+    d + '% Offer';
+
+
+  document.getElementById('offerRev').textContent =
+    '₹' + rev.toLocaleString('en-IN');
+
+
+  document.getElementById('offerBar').style.width =
+    Math.min(100,30 + d * 7) + '%';
+
+
+  document.getElementById('riskLevel').textContent =
+    d > 14 ? 'High' :
+    d < 6 ? 'Low' :
+    'Medium';
+
+
+  document.getElementById('explanation').textContent =
+    `A ${d}% targeted retention offer is expected to recover inactive customers while maintaining a ${d > 16 ? 'lower' : 'positive'} revenue impact.`;
+
+}
+
+
+slider.addEventListener(
+  'input',
+  updateSim
+);
+
+
+document.getElementById('runSim').addEventListener(
+  'click',
+  () => {
+
+    updateSim();
+
+    document.getElementById('runSim').textContent =
+      'Simulation Updated';
+
+
+    setTimeout(() => {
+
+      document.getElementById('runSim').textContent =
+        'Run Simulation';
+
+    },1600);
+
+  }
+);
+
+</script>
+
+</body>
+</html>
