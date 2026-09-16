@@ -505,32 +505,6 @@ sequenceDiagram
 
 * GitHub
 
----
-
-# 📁 Project Structure
-
-```text
-vyaparmitra-ai/
-│
-├── index.html
-├── style.css
-├── script.js
-│
-├── assets/
-│   ├── images/
-│   └── icons/
-│
-├── screenshots/
-│   ├── overview.png
-│   ├── revenue-insights.png
-│   ├── opportunities.png
-│   ├── simulator.png
-│   ├── recommended-actions.png
-│   └── campaign-results.png
-│
-├── README.md
-└── LICENSE
-```
 
 ---
 
